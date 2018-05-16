@@ -11,7 +11,7 @@ int main(){
     int array[max],x,y=0;
     bool key;
 
-    for(int i = 0; i<20; i++){
+    for(int i = 0; i<20;i++){
         key = false;
         while(true){
             cin>>x;
@@ -28,6 +28,9 @@ int main(){
                     cout<<x<<" Numero UNICO"<<endl;
                 }
                 break;
+            }
+            else{
+                cout<<":Numero nao aceito"<<endl;
             }
 
         }

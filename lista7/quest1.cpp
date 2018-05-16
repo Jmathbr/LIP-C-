@@ -16,7 +16,7 @@ bool matriz(int x, int y){
     int array[max][max], line,col,contcol = 0,contline = 0;
     bool keyroot = false;
     bool keypermut = false;
-
+    /*
     array[0][0] = 1;
     array[0][1] = 0;
     array[0][2] = 0;
@@ -28,15 +28,14 @@ bool matriz(int x, int y){
     array[2][0] = 0;
     array[2][1] = 0;
     array[2][2] = 1;
-    
+    */
     //caso queira informar a matriz, e so descomentar o codigo abaixo e comentar o codigo acima
-   /*
+   
     for( int i = 0;i < x; i++){
             for( int j = 0;j < y; j++){
                 cin>>array[i][j];
             }
         }
-        */
 
     for( int i = 0;i < x; i++){
         for( int j = 0;j < y; j++){
