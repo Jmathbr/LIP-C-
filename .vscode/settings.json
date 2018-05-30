@@ -4,6 +4,7 @@
         "limits": "cpp",
         "iostream": "cpp",
         "array": "cpp",
-        "cstdlib": "cpp"
+        "cstdlib": "cpp",
+        "cstring": "cpp"
     }
 }
