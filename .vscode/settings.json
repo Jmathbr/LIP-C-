@@ -5,6 +5,8 @@
         "iostream": "cpp",
         "array": "cpp",
         "cstdlib": "cpp",
-        "cstring": "cpp"
+        "cstring": "cpp",
+        "typeinfo": "cpp",
+        "cmath": "cpp"
     }
 }
