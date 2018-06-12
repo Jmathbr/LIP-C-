@@ -67,10 +67,24 @@ int binsearch(Sensor vec[max],int n, int value){
         }
     }
 }
+
+int verificaRepeticao( int code, Sensor sensor[] , int tam)
+{
+    for(int i=0; i < tam; i++)
+    {
+        if(code == sensor[i].cod){
+            return -1;
+        }
+    }
+    return code;
+}
+
 int main(){
     int n;
     int cod;
     int ran;
+    int aux;
+    bool key =true;
 
     srand(time(NULL));
 
@@ -90,31 +104,67 @@ int main(){
         sensor[i].leitura = (rand()%500)+1;
     }
 
-    for(int i = 0; i<n;i++){
-        if(i == 0){
-            sensor[i].cod = rand()%n+1;
+    
+    
+    
+
+    /*while(true)
+    {   
+        aux = (rand()%n)+1;
+        cout << aux << endl;
+        for(int i=0; i < n; i++)
+        {
+            if( sensor[i].cod == aux )
+            {
+                aux = (rand()%n)+1;
+                cout << aux << endl;
+            } 
+            else
+            {
+                sensor[i].cod = aux;
+                break;
+            }
         }
-        else{
-            int key = true;
-            while(key){
-                int teorico = rand()%n+1;
-                cout<<"value: "<<teorico<<endl;
-                for(int j = 0; j<=i;j++){
-                    cout<<"Cod: "<<sensor[j].cod<<" posicao: "<<j<<endl;
-                    if(sensor[j].cod == teorico){
-                        key = true;
-                    }
-                    else{
+        break;
+    }*/
+
+    
+    /*for(int i = 0; i<n;i++){
+        key = true;
+        while(key){
+            aux = (rand()%n)+1;
+            if(i == 0){
+                sensor[i].cod = aux;
+                cout<<"add new number";
+                break;
+            }
+            else{
+                for(int j = 0; j<i;j++){
+                    if(sensor[j].cod != aux){
+                        sensor[j].cod = aux;
                         key = false;
+                        cout<<j<<" erro "<<aux<<endl;
+                        break;
+                    }else{
+                        aux = (rand()%n)+1;
                     }
-                }
-                if(key == false){
-                    sensor[i].cod = teorico;
-                    break;
                 }
             }
         }
+    }*/
+    int valor;
+    for(int i=0; i < n; i++)
+    {
+        aux = (rand()%n)+1;
+        valor = verificaRepeticao(aux, sensor, i);
+        while( valor == -1 )
+        {
+            aux = (rand()%n)+1;
+            valor = verificaRepeticao(aux, sensor, i);
+        }
+        sensor[i].cod = aux;
     }
+    
 
     ordem(sensor,n);
     for(int i=0;i<n;i++){
