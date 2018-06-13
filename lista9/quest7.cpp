@@ -104,54 +104,6 @@ int main(){
         sensor[i].leitura = (rand()%500)+1;
     }
 
-    
-    
-    
-
-    /*while(true)
-    {   
-        aux = (rand()%n)+1;
-        cout << aux << endl;
-        for(int i=0; i < n; i++)
-        {
-            if( sensor[i].cod == aux )
-            {
-                aux = (rand()%n)+1;
-                cout << aux << endl;
-            } 
-            else
-            {
-                sensor[i].cod = aux;
-                break;
-            }
-        }
-        break;
-    }*/
-
-    
-    /*for(int i = 0; i<n;i++){
-        key = true;
-        while(key){
-            aux = (rand()%n)+1;
-            if(i == 0){
-                sensor[i].cod = aux;
-                cout<<"add new number";
-                break;
-            }
-            else{
-                for(int j = 0; j<i;j++){
-                    if(sensor[j].cod != aux){
-                        sensor[j].cod = aux;
-                        key = false;
-                        cout<<j<<" erro "<<aux<<endl;
-                        break;
-                    }else{
-                        aux = (rand()%n)+1;
-                    }
-                }
-            }
-        }
-    }*/
     int valor;
     for(int i=0; i < n; i++)
     {
